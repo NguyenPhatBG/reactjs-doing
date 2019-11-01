@@ -22,6 +22,13 @@ class App extends Component {
     let myItem = this.state.myArr.filter(item => item.id !== id);
     this.setState({ myArr: myItem });
   }
+  componentDidMount() {
+    console.log('component mouted');
+  }
+  componentDidUpdate(prevProps, prevState){
+    console.log('component updated');
+    console.log(prevProps, prevState);
+  }
   render() {
     const { myArr } = this.state;
     return (
